@@ -1,10 +1,10 @@
-1. Creat React APP
+### 1. Creat React APP
 
 ```bash
 yarn create vite
 ```
 
-2. Modify vite.config.js
+### 2. Modify vite.config.js
 ```js
 export default defineConfig({
   plugins: [react()],
@@ -15,20 +15,20 @@ export default defineConfig({
 })
 ```
 
-3. Initialize git
+### 3. Initialize git
 
 ```bash
 git init
 ```
 
 
-4. Create github repo
+### 4. Create github repo
 
 ![1677488601434](image/README/1677488601434.png)
 
 
 
-5. Rename local branch and set remote branch
+### 5. Rename local branch and set remote branch
 
 ```bash
 git remote add origin https://github.com/yuenci/react-gh-pages-action1.git
@@ -36,7 +36,7 @@ git branch -M main
 git push -u origin main
 ```
 
-6. Create gh-pages branch
+### 6. Create gh-pages branch
 
 Commit your project before your execute blow commands
 
@@ -45,7 +45,7 @@ git checkout -b gh-pages
 # create a new branch
 ```
 
-7. Generate token
+### 7. Generate token
 
 Go to: https://github.com/settings/tokens
 
@@ -53,11 +53,11 @@ Go to: https://github.com/settings/tokens
 
 ![1677488821693](image/README/1677488821693.png)
 
-8. Set token
+### 8. Set token
 
 ![1677488867294](image/README/1677488867294.png)![1677488903579](image/README/1677488903579.png)
 
-9. Create .github/workflows folder, then create a deploy.yml in it.
+### 9. Create .github/workflows folder, then create a deploy.yml in it.
 
 ![1677489003136](image/README/1677489003136.png)
 
@@ -90,9 +90,11 @@ jobs:
           Token: ${{ secrets.TOKEN }} # This token is provided by Actions, you do not need to create your own token.
 ```
 
-10. Switch to main branch, then commit new code, CI/CD will proceed automatically.
+### 10. Switch to main branch, then commit new code, CI/CD will proceed automatically.
 
-PS:
+
+### PS:
+
 1. The resources in the public file directly use the relative path, and there is no need to write "public", otherwise the compilation will be wrong.
 
 Wrong way:
