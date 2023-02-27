@@ -25,16 +25,6 @@ git checkout -b gh-pages
 # create a new branch
 ```
 
-OR
-
-```bash
-git checkout --orphan gh-pages
-git rm -rf .
-# create a new empty branch
-```
-
-
-
 4. 获取token
 
 前往 https://github.com/settings/tokens
