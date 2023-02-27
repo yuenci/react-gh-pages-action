@@ -7,6 +7,7 @@
 ```bash
 git init
 ```
+
 3. 重命名本地分支，以及设置远程分支
 
 ```bash
@@ -14,6 +15,25 @@ git remote add origin https://github.com/yuenci/react-gh-pages-action1.git
 git branch -M main
 git push -u origin main
 ```
+
+4. Create gh-pages branch
+
+Commit your project before your execute blow commands
+
+```bash
+git checkout -b gh-pages
+# create a new branch
+```
+
+OR
+
+```bash
+git checkout --orphan gh-pages
+git rm -rf .
+# create a new empty branch
+```
+
+
 
 4. 获取token
 
