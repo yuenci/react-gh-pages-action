@@ -91,3 +91,14 @@ jobs:
 ```
 
 10. Switch to main branch, then commit new code, CI/CD will proceed automatically.
+
+PS:
+1. The resources in the public file directly use the relative path, and there is no need to write "public", otherwise the compilation will be wrong.
+
+Wrong way:
+![1677491165857](image/README/1677491165857.png)
+
+Correct Way:
+![1677491173587](image/README/1677491173587.png)
+
+2. Don't need to configure pages, the action will automatically complete the relevant configurations.
