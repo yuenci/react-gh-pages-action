@@ -1,14 +1,34 @@
-1. 创建github项目
+1. Creat React APP
 
-![1677488601434](image/README/1677488601434.png)
+```bash
+yarn create vite
+```
 
-2. 初始化本地仓库
+2. Modify vite.config.js
+```js
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'build'
+  },
+  base: './',
+})
+```
+
+3. Initialize git
 
 ```bash
 git init
 ```
 
-3. 重命名本地分支，以及设置远程分支
+
+4. Create github repo
+
+![1677488601434](image/README/1677488601434.png)
+
+
+
+5. Rename local branch and set remote branch
 
 ```bash
 git remote add origin https://github.com/yuenci/react-gh-pages-action1.git
@@ -16,7 +36,7 @@ git branch -M main
 git push -u origin main
 ```
 
-4. Create gh-pages branch
+6. Create gh-pages branch
 
 Commit your project before your execute blow commands
 
@@ -25,19 +45,19 @@ git checkout -b gh-pages
 # create a new branch
 ```
 
-4. 获取token
+7. Generate token
 
-前往 https://github.com/settings/tokens
+Go to: https://github.com/settings/tokens
 
 ![1677488794380](image/README/1677488794380.png)
 
 ![1677488821693](image/README/1677488821693.png)
 
-5. 设置token
+8. Set token
 
 ![1677488867294](image/README/1677488867294.png)![1677488903579](image/README/1677488903579.png)
 
-6. 新建 [.github/workflows](https://github.com/yuenci/react-gh-pages-action/tree/master/.github/workflows "This path skips through empty directories") 文件夹，之后新建deploy.yml 文件
+9. Create .github/workflows folder, then create a deploy.yml in it.
 
 ![1677489003136](image/README/1677489003136.png)
 
@@ -69,3 +89,5 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           Token: ${{ secrets.TOKEN }} # This token is provided by Actions, you do not need to create your own token.
 ```
+
+10. Switch to main branch, then commit new code, CI/CD will proceed automatically.
